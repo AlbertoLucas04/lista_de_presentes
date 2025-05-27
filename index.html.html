@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lista Chá de Casa Nova</title>
+  <!-- <link rel="stylesheet" href="styleHome.css"> 
+  -->
+
+  <style>
+  
+@font-face {
+  font-family: "Cabin Sketch";
+  src: url(font/CabinSketch-Regular.ttf);
+}
+
+body {
+  text-align: center;
+  background-color: #A5E0CC;
+  margin: 0;
+  padding: 0;
+}
+
+#conteinerPrincipal {
+  background-color: #0A2A56;
+  border-radius: 15px;
+  margin: 60px auto 90px auto;
+  padding: 40px 30px;
+  font-family: "Cabin Sketch";
+  color: #fff;
+  max-width: 800px;
+  box-sizing: border-box;
+}
+
+#littleLetter {
+  margin: 40px 20px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+#nameTitle {
+  font-size: 18px;
+}
+
+#nameBox {
+  border-radius: 3px;
+  height: 30px;
+  font-size: 15px;
+  padding: 5px;
+  width: 80%;
+  max-width: 300px;
+}
+
+#listaItens {
+  border-radius: 3px;
+  font-family: "Cabin Sketch";
+  cursor: auto;
+  height: 36px;
+  width: 80%;
+  max-width: 300px;
+  font-size: 15px;
+  padding: 5px;
+}
+
+button {
+  border-radius: 3px;
+  background-color: #0A2A56;
+  border: 2px solid white;
+  font-family: "Cabin Sketch";
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  height: 42px;
+  width: 120px;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.03);
+}
+
+p {
+  font-size: 18px;
+  margin: 20px;
+}
+
+a {
+  color: #FFE0A6;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@font-face {
+  font-family: "Cabin Sketch";
+  src: url(font/CabinSketch-Regular.ttf);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Cabin Sketch";
+  background-color: #A5E0CC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#conteinerPrincipal {
+  background-color: #0A2A56;
+  border-radius: 15px;
+  padding: 40px 30px;
+  color: #fff;
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1, h2 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 26px;
+  text-align: center;
+}
+
+#littleLetter {
+  font-size: 18px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#nameTitle {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+#nameBox,
+#listaItens {
+  width: 100%;
+  max-width: 300px;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  margin-bottom: 25px;
+  font-family: "Cabin Sketch";
+}
+
+#listaItens {
+  height: 40px;
+}
+
+button {
+  width: 100%;
+  max-width: 200px;
+  height: 44px;
+  background-color: #0A2A56;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  font-size: 18px;
+  color: white;
+  font-family: "Cabin Sketch";
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.03);
+}
+
+a {
+  margin-top: 30px;
+  color: #FFE0A6;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  #conteinerPrincipal {
+    margin: 40px 30px;
+    padding: 70px 40px;
+  }
+
+  h1, h2 {
+    font-size: 38px;
+    line-height: 1.4;
+  }
+
+  #littleLetter {
+    font-size: 26px;
+    line-height: 1.8;
+  }
+
+  #nameTitle {
+    font-size: 26px;
+    line-height: 1.6;
+  }
+
+  #nameBox,
+  #listaItens {
+    font-size: 24px;
+    padding: 16px;
+    height: auto;
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: 26px;
+    width: 100%;
+    max-width: 280px;
+    height: 60px;
+    padding: 14px;
+  }
+
+  a {
+    font-size: 28px;
+    line-height: 1.6;
+  }
+}
+
+
+</style>
+</head>
+<body>
+  <div id="conteinerPrincipal">
+    <br>
+    <h1>Chá de Panela - Ingrid e Alberto</h1>
+
+    <p id="littleLetter">
+      Olá, que maravilha que você vai poder estar conosco nesse dia tão memorável. Nós louvamos a Deus pelo que Ele têm feito e por você poder ser parte disso. Abaixo está um pequeno formulário que nos ajudará a organizar a logística desse maravilhoso evento.
+    </p>
+
+    <br><br>
+
+    <label id="nameTitle" for="nameBox">Seu nome:</label>
+    <input type="text" id="nameBox" name="nome" />
+    <br><br><br>
+
+    <h2 id="chooseAGift">Escolha um presente:</h2>
+    <select id="listaItens">
+      <option value="">-- Selecione um item --</option>
+      <option>Escorredor de louças (preto)</option>
+      <option>Jogo de xícaras</option>
+      <option>Jogo de sobremesa (vidro)</option>
+      <option>Jogo de copos (vidro)</option>
+      <option>Boleira de vidro</option>
+      <option>Travessa duralex</option>
+      <option>Pirex de louça retangular (branca)</option>
+      <option>Pirex de louça redondo (branca)</option>
+      <option>Porta temperos de vidro (3 unid)</option>
+      <option>Tábua de carne com silicone</option>
+      <option>Frigideira antiaderente Carrefour Home</option>
+      <option>Fruteira</option>
+      <option>Jogo americano azul (fácil de limpar)</option>
+      <option>Suporte de papel toalha</option>
+      <option>Porta copos de inox</option>
+      <option>Jogo de tapete de cozinha (preto)</option>
+      <option>Jogo de tapete de banheiro (branco)</option>
+      <option>Jogo de lençóis</option>
+      <option>Lençóis de elástico</option>
+      <option>Jogo de cama</option>
+      <option>Caixa organizadora (grande)</option>
+      <option>Cortina blackout off white (2,57x2,46m)</option>
+      <option>Manta para sofá (off white/linho)</option>
+      <option>Jogo de toalha</option>
+      <option>Cesto de roupa (grande)</option>
+      <option>Lixeira de banheiro inox</option>
+      <option>Kit 3 almofadas (linho/off white)</option>
+      <option>Frigideira pequena antiaderente</option>
+      <option>Leiteira</option>
+      <option>Kit descanso de panela</option>
+      <option>Jogo de peneiras (branco)</option>
+      <option>Jogo de panelas Tramontina</option>
+      <option>Pipoqueira (panela)</option>
+      <option>Panela de pressão (grande)</option>
+      <option>Abajur</option>
+      <option>Kit cabide madeira</option>
+      <option>Cobertor casal (bege ou off white)</option>
+      <option>Porta papel toalha</option>
+      <option>Porta-retrato de parede média (100x70cm)</option>
+      <option>Álbum grande</option>
+      <option>Varal de chão (grande)</option>
+      <option>Abajur de chão (preto ou branco)</option>
+      <option>Kit 2 travesseiros</option>
+      <option>Kit acessórios de banheiro (dourado)</option>
+      <option>Torneira para banheiro (dourada)</option>
+      <option>Mixer</option>
+      <option>Cortina voil (branca ou off white, 2,56x2,46)</option>
+      <option>Mesa de apoio lateral de cama</option>
+      <option>Kit peneiras</option>
+      <option>Tapioqueira</option>
+      <option>Forma de silicone</option>
+      <option>Potes de vidro</option>
+      <option>Escova sanitária</option>
+      <option>Bule de chá / café</option>
+      <option>Ferro de passar roupa</option>
+      <option>Jarras de água</option>
+      <option>Queijeira</option>
+      <option>Ralador / triturador</option>
+    </select>
+    <br><br><br><br>
+
+    <button onclick="confirmarPresente()"><b>Confirmar</b></button>
+
+    <script>
+      // Remove da lista os itens já selecionados anteriormente
+      window.addEventListener("DOMContentLoaded", () => {
+        const select = document.getElementById("listaItens");
+        const removidos = JSON.parse(localStorage.getItem("itensRemovidos")) || [];
+
+        for (let i = select.options.length - 1; i >= 0; i--) {
+          if (removidos.includes(select.options[i].text)) {
+            select.remove(i);
+          }
+        }
+      });
+
+      async function confirmarPresente() {
+        const nomeInput = document.getElementById('nameBox');
+        const nome = nomeInput.value.trim();
+        const select = document.getElementById('listaItens');
+        const index = select.selectedIndex;
+
+        if (!nome) {
+          alert("Por favor, digite seu nome.");
+          return;
+        }
+
+        if (index <= 0) {
+          alert("Por favor, selecione um presente.");
+          return;
+        }
+
+        const item = select.options[index].text;
+
+        // Salva item no localStorage para não reaparecer
+        let removidos = JSON.parse(localStorage.getItem("itensRemovidos")) || [];
+        removidos.push(item);
+        localStorage.setItem("itensRemovidos", JSON.stringify(removidos));
+
+        // Envia para o Google Sheets
+        const url = "https://script.google.com/macros/s/AKfycbwQ_tRkjP560U6Cz45ipx2StXND5AWf5qKMKwTvLLGZA4KXz6ZEUOLIdpbBiuL3YAqUjg/exec";
+
+        try {
+          const response = await fetch(url, {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: `nome=${encodeURIComponent(nome)}&item=${encodeURIComponent(item)}`
+          });
+
+          if (response.ok) {
+            window.location.href = `confirmado.html?item=${encodeURIComponent(item)}&nome=${encodeURIComponent(nome)}`;
+          } else {
+            alert("Erro ao salvar, tente novamente.");
+          }
+        } catch (error) {
+          alert("Erro de conexão com o servidor.");
+          console.error(error);
+        }
+      }
+    </script>
+    <br><br><br>
+  </div>
+</body>
+</html>
